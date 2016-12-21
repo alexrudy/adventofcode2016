@@ -76,13 +76,7 @@ def elf_circle_list(n):
         left.append(right.pop())
     return left[0] or right[0]
     
-class Node(object):
-    """docstring for Node"""
-    def __init__(self, arg):
-        super(Node, self).__init__()
-        self.arg = arg
-        
-    
+
 @pytest.mark.parametrize("n, l",[
     (5, 2)
 ])
