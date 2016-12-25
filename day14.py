@@ -115,7 +115,7 @@ def iter_keys(salt, stretch=0, verbose=False):
                         triples.remove((index, key))
                     elif (index + 1000) <= i:
                         triples.remove((index, key))
-        if len(keys) and keys[0][0] + 1000 <= i:
+        while len(keys) and keys[0][0] + 1000 <= i:
             yield heapq.heappop(keys)
         if verbose and i % 10000 == 0:
             print(f"Index {i:,d}, N={len(candidates)}")
